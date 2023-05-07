@@ -1,0 +1,63 @@
+{
+    "questions": [{
+            "question": "What is the difference between '==' and '===' operators?",
+            "answers": [
+                "'==' performs type coercion, while '===' does not",
+                "'===' performs type coercion, while '==' does not",
+                "Both operators perform type coercion",
+                "Neither operator performs type coercion"
+            ],
+            "correct_answer": "'==' performs type coercion, while '===' does not"
+        },
+        {
+            "question": "What is a closure in JavaScript?",
+            "answers": [
+                "A function that returns another function",
+                "The process of making variables inaccessible outside of a function",
+                "An object with no methods or properties",
+                "A data structure for storing key-value pairs"
+            ],
+            "correct_answer": "A function that returns another function"
+        },
+        {
+            "question": "What is the difference between var, let and const?",
+            "answers": [
+                "'var' has function scope, while 'let' and 'const' have block scope",
+                "'let' and 'const' have function scope, while 'var' has block scope",
+                "All three keywords have the same scope",
+                "'const' cannot be reassigned, while 'var' and 'let' can"
+            ],
+            "correct_answer": "'var' has function scope, while 'let' and 'const' have block scope"
+        },
+        {
+            "question": "What is the event loop in JavaScript?",
+            "answers": [
+                "The mechanism by which JavaScript handles asynchronous callbacks",
+                "A loop that iterates over all the elements in an array",
+                "A function that executes when a web page is loaded",
+                "The process by which JavaScript compiles code into machine language"
+            ],
+            "correct_answer": "The mechanism by which JavaScript handles asynchronous callbacks"
+        },
+        {
+            "question": "What is the difference between null and undefined in JavaScript?",
+            "answers": [
+                "Null is an assignment value representing no value, while undefined means a variable has been declared but not assigned a value",
+                "Undefined is an assignment value representing no value, while null means a variable has been declared but not assigned a value",
+                "Both keywords have the same meaning",
+                "Null and undefined are both primitive data types in JavaScript"
+            ],
+            "correct_answer": "Null is an assignment value representing no value, while undefined means a variable has been declared but not assigned a value"
+        },
+        {
+            "question": "What is a callback function in JavaScript?",
+            "answers": [
+                "A function that is passed as an argument to another function and is executed later",
+                "A function that is defined inside of another function",
+                "A function that is used to create a closure",
+                "A function that is executed immediately when it is defined"
+            ],
+            "correct_answer": "A function that is passed as an argument to another function and is executed later"
+        }
+    ]
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        main {
+            display: flex;
+            align-items: center;
+            /* Vertically align items */
+            height: 100vh;
+            /* Set minimum height to 100% of viewport height */
+            max-width: 100vw;
+        }
+
+        /* --------------- main containers --------------- */
+        .container {
+            display: flex;
+            flex-direction: row;
+            margin: 0px;
+            padding-right: 9%;
+            max-height: 50vh;
+            /* Set minimum height to 100% of viewport height */
+            min-width: 20vw;
+            padding-bottom: 10%;
+        }
+
+        .quiz-container {
+            display: flex;
+            flex-direction: row;
+            padding-left: 10%;
+            padding-top: 0px;
+        }
+
+
+        .question-number {
+            margin-right: 5%;
+        }
+
+        .quiz-area {
+            width: 200%;
+            padding-right: 25px;
+        }
+
+        /* --------------- Button --------------- */
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 9px 17px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-weight: 800;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.779);
+            color: white;
+        }
+
+        .button-container {
+            padding: 10px;
+        }
+
+        /* --------------- Answers --------------- */
+
+        .answers-area {
+            padding-top: 2%;
+        }
+
+        .answer0,
+        .answer1,
+        .answer2,
+        .answer3 {
+            border: 1px solid black;
+            background-color: rgba(68, 68, 68, 0.164);
+            padding: 7px 3px;
+            margin: 8px 0px;
+            border-radius: 4px;
+            width: 500px;
+            font-weight: 100;
+        }
+
+        .answer0 .checked,
+        .answer1 .checked,
+        .answer2 .checked,
+        .answer3 .checked {
+            border: 5px solid black;
+
+        }
+
+        .answer0:hover,
+        .answer1:hover,
+        .answer2:hover,
+        .answer3:hover {
+            background-color: rgba(68, 68, 68, 0.418);
+        }
+
+
+
+        input[type="radio"] {
+            border-radius: 20px;
+            appearance: none;
+            border-radius: 0;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #000;
+            background-color: white;
+            padding-left: 0px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        input[type="radio"]:checked::before {
+            border-radius: 1px;
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            margin: 2px 0px 0px 2.4px;
+            background-color: #000;
+
+        }
+
+        input[type="radio"]+label {
+            padding-top: 2px;
+            padding-left: 4px;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 15px;
+        }
+
+
+        /* --------------- question --------------- */
+        h2 {
+            line-height: 28px;
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Gilda Display', serif;
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+
+        /* --------------- Result page --------------- */
+        .results {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 800% !important;
+            max-width: none !important;
+            box-sizing: border-box !important;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 0px;
+            color: rgb(0, 0, 0);
+            margin: 0.67em 0px;
+            font-family: 'Gilda Display', serif;
+            word-spacing: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* --------------- Span --------------- */
+        .bullets {
+            display: flex;
+            padding-top: 150px;
+            padding-bottom: 5%;
+        }
+
+        .bullets .spans {
+            flex: 1;
+            display: flex;
+        }
+
+        .bullets .spans span {
+            width: 30px;
+            height: 30px;
+            background-color: rgba(68, 68, 68, 0.164);
+            ;
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+
+        .bullets .spans span.on {
+            background-color: black
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <section class="flex">
+           <div class="icons">
+              <div id="menu-btn" class="fas fa-bars"></div>
+              <div id="search-btn" class="fas fa-search"></div>
+           </div>
+  
+           <a href="home.html" class="logo">
+              <h1 class="heading">elearning</h1>
+           </a>
+  
+           <form action="search.html" method="post" class="search-form">
+              <div class="search-box">
+                 <form action="#">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                 </form>
+              </div>
+  
+           </form>
+  
+  
+           <div class="profile">
+              <img
+                 src="https://th.bing.com/th/id/R.e57ced3c8bffd49be3f34d8553fe015d?rik=8gVnsDFz0XpO7Q&pid=ImgRaw&r=0"
+                 class="image" alt="">
+              <h3 class="name">shaikh anas</h3>
+              <p class="role">studen</p>
+              <a href="profile.html" class="btn">view profile</a>
+              <div class="flex-btn">
+                 <a href="login.html" class="option-btn">login</a>
+                 <a href="register.html" class="option-btn">register</a>
+              </div>
+           </div>
+  
+        </section>
+  
+     </header>
+  
+     <div class="side-bar">
+  
+        <div id="close-btn">
+           <i class="fas fa-times"></i>
+        </div>
+  
+        <div class="profile">
+           <a href="profile.html">
+              <img style="height: 60px;"
+                 src="https://png.pngtree.com/png-vector/20190710/ourlarge/pngtree-user-vector-avatar-png-image_1541962.jpg"
+                 class="image" alt="">
+           </a>
+           <h3 class="name">User</h3>
+        </div>
+  
+  
+        <nav class="navbar">
+           <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+           <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+           <a href="Assesments.html"><i class="fas fa-question"></i><span>Test & Quizzes</span></a>
+           <a href="assignments.html"><i class="fas fa-book"></i><span>Assignments</span></a>
+           <a href="contact.html"><i class="fas fa-headset"></i><span>Contact us</span></a>
+  
+           <nav class="user-cta" aria-label="Account">
+              <a class="btn btn-tertiary user-link sign-in-link"
+                 href="login.html">Sign in</a>
+                 <a class="btn btn-brand user-link mx-1 register-link" href="register.html">
+                 <div class="register-link-text">Register</div>
+              </a></nav>
+  
+           <div class="side_menu_three--container">
+              <div class="side_menu_three">
+                 <p>Legal</p>
+              </div>
+              <div class="side_menu_three" id="privacy_center">
+                 <p>Privacy Center</p>
+              </div>
+              <div class="side_menu_three" id="privacy_policy">
+                 <p>Privacy Policy</p>
+              </div>
+              <div class="side_menu_three" id="cookies">
+                 <p>Cookies</p>
+              </div>
+              <div class="side_menu_three" id="about_ads">
+                 <p>About Ads</p>
+              </div>
+           </div>
+        </nav>
+  
+     </div>
+
+    <main class="main">
+        <div class="container" style="display: flex; flex-direction: column;">
+            <div class="quiz-container" style="width: 100%;">
+                <div class="question-number">
+                    <h4><span class="question-index2"></span>:</h4>
+                </div>
+                <div class="content-except-question-index2">
+                    <div class="question">
+                        <div class="quiz-area"></div>
+                        <div class="answers-area"></div>
+                    </div>
+                    <div class="button-container"></div>
+                    <button class="submit-button">OK <span style="font-weight: 1000;">🗸</span> </button>
+
+                    <div class="bullets">
+                        <div class="spans"></div>
+                        <div class="countdown"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        </div>
+    </main>
+
+
+
+
+
+
+    <!-- custom js file link  -->
+    <script src=" js/script.js"> </script>
+</body>
+
+</html>
