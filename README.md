@@ -1,7 +1,7 @@
 # E-Learning-Website
 
 ## Description
--	A learning system that contains the facility to upload documents online, watch videos online, Responsive Design, and Take online Assessments.
+-	A E-learning system that contains the facility to upload documents online, watch videos online, Responsive Design, and Take online Assessments.
 
 
 ## Technologies Used
